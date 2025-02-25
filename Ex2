@@ -1,0 +1,33 @@
+package pkg;
+
+import java.util.Scanner;
+
+public class Ex5 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Leitura das coordenadas do ponto
+        System.out.print("Digite a coordenada X: ");
+        int x = scanner.nextInt();
+        System.out.print("Digite a coordenada Y: ");
+        int y = scanner.nextInt();
+        
+        // Determinação do quadrante ou eixo
+        if (x == 0 && y == 0) {
+            System.out.println("O ponto está na origem.");
+        } else if (x == 0) {
+            System.out.println("O ponto está sobre o eixo Y.");
+        } else if (y == 0) {
+            System.out.println("O ponto está sobre o eixo X.");
+        } else if (x > 0 && y > 0) {
+            System.out.println("O ponto está no primeiro quadrante.");
+        } else if (x < 0 && y > 0) {
+            System.out.println("O ponto está no segundo quadrante.");
+        } else if (x < 0 && y < 0) {
+            System.out.println("O ponto está no terceiro quadrante.");
+        } else {
+            System.out.println("O ponto está no quarto quadrante.");
+        }
+        
+        scanner.close();
+    }
